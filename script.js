@@ -48,7 +48,7 @@ var searchWeater = function (){
         //CHECKS FOR UV INDEX
         var lat =d.city.coord.lat;
         var lon =d.city.coord.lon;
-        fetch('http://api.openweathermap.org/data/2.5/uvi?lat='+lat+'&lon='+lon+'&appid='+key)
+        fetch('https://api.openweathermap.org/data/2.5/uvi?lat='+lat+'&lon='+lon+'&appid='+key)
         .then(function(resp2) { return resp2.json() }) // Convert data to json
         .then(function(data2) {
         document.getElementById('today-uvindex').innerHTML ="UV Index: " + data2.value;
