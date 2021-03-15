@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather Tracker</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+        </header>
+        
+
+            <div class="card">
+                <h3 class="card-header text-uppercase">Search By City</h3>
+                <form id="user-form" class="card-body">
+                  <label class="form-label" for="username">City</label>
+                  <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+                  <button type="submit" class="submit">Get Weather</button>
+                </form>
+              </div>
+
+              <div class="row">
+              <div class="col-5" id="search-history"></div>
+
+              <div class="col-5 align-self-end" id="today-weather">
+                <h1 id="today-location"></h1>
+                <h1 id="today-date"></h1>
+                <h2 id="today-temp"></h2>
+                <h2 id="today-humidity"></h2>
+                <h2 id="today-windspeed"></h2>
+                <h2 id="today-uvindex"></h2>
+              </div>
+            </div>
+
+         <div class="row">
+            <div class="col offset" id="day1-weather">
+                <h2 id="day1-date"></h1>
+                <h3 id="day1-temp"></h2>
+                <h3 id="day1-humidity"></h2>
+            </div>
+
+            <div class="col offset" id="day2-weather">
+                <h2 id="day2-date"></h1>
+                <h3 id="day2-temp"></h2>
+                <h3 id="day2-humidity"></h2>
+            </div>
+
+            <div class="col offset" id="day3-weather">
+                <h2 id="day3-date"></h1>
+                <h3 id="day3-temp"></h2>
+                <h3 id="day3-humidity"></h2>
+            </div>
+
+            <div class="col offset" id="day4-weather">
+                <h2 id="day4-date"></h1>
+                <h3 id="day4-temp"></h2>
+                <h3 id="day4-humidity"></h2>
+            </div>
+
+            <div class="col offset" id="day5-weather">
+                <h2 id="day5-date"></h1>
+                <h3 id="day5-temp"></h2>
+                <h3 id="day5-humidity"></h2>
+            </div>
+        </div>
+
+        <footer>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+body, html {
+margin:3%
+    }
+
+.col{
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+    font-size:0.5rem;
+    margin: 1px;
+}
+
+.bttn{
+width:50%;
+font-size:2rem;
+}
