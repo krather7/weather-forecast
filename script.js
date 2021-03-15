@@ -20,7 +20,7 @@ var formSubmitHandler = function (event) {
 var searchWeater = function (){
     //======================================================
     //Gets Today's Weather
-       fetch('http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid='+key)
+       fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid='+key)
         .then(function(resp3) { return resp3.json() }) // Convert data to json
         .then(function(data3) {
             var fahrenheit = Math.round(((parseFloat(data3.main.temp)-273.15)*1.8)+32); 
