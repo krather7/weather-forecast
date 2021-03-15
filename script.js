@@ -12,7 +12,8 @@ let cityArray=[]
 
 var formSubmitHandler = function (event) {
     event.preventDefault();
-    cityName = nameInputEl.value.trim();
+    cityText = nameInputEl.value.trim();
+    cityName = cityText.toUpperCase();
     searchWeater(event)
   }
   
@@ -52,22 +53,22 @@ var searchWeater = function (){
         .then(function(data2) {
         document.getElementById('today-uvindex').innerHTML ="UV Index: " + data2.value;
 
-        if (data2.value<=2){
-          document.getElementById('today-uvindex').style.backgroundColor="green";
-                  } else if(data2.value>=2 && data2.value<=8){
-          document.getElementById('today-uvindex').style.backgroundColor="yellow";
+        if (data2.value<=3){
+          document.getElementById('today-uvindex').style.color="lightgreen";
+                  } else if(data2.value>=3 && data2.value<=8){
+          document.getElementById('today-uvindex').style.color="yellow";
                   } else {
-          document.getElementById('today-uvindex').style.backgroundColor="red";
+          document.getElementById('today-uvindex').style.color="red";
                   }
 
         })
         
         //5 DAY FORECAST
-        document.getElementsByClassName("col")[0].style.backgroundColor="blue";
-        document.getElementsByClassName("col")[1].style.backgroundColor="blue";
-        document.getElementsByClassName("col")[2].style.backgroundColor="blue";
-        document.getElementsByClassName("col")[3].style.backgroundColor="blue";
-        document.getElementsByClassName("col")[4].style.backgroundColor="blue";
+        document.getElementsByClassName("col")[0].style.backgroundColor="darkblue";
+        document.getElementsByClassName("col")[1].style.backgroundColor="darkblue";
+        document.getElementsByClassName("col")[2].style.backgroundColor="darkblue";
+        document.getElementsByClassName("col")[3].style.backgroundColor="darkblue";
+        document.getElementsByClassName("col")[4].style.backgroundColor="darkblue";
 
         var fahrenheit = Math.round(((parseFloat(d.list[0].main.temp)-273.15)*1.8)+32);
         var iconCode = d.list[4].weather[0].icon 
@@ -165,6 +166,7 @@ if (i >=5){
   var newBr = document.createElement('br');
   newSpan.innerText = searchHistory.city;
   newSpan.id = "btn"+i;
+  newSpan.className="bttn"
   newBr.id= "br"+i;
   newDiv.appendChild(newSpan);
   newDiv.appendChild(newBr);

@@ -1,16 +1,30 @@
 body, html {
-margin:3%
+margin:3%;
+background: rgb(43,43,43);
+background: linear-gradient(0deg, rgba(43,43,43,1) 0%, rgba(195,195,195,1) 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
     }
 
 .col{
-    color: white;
+    color: lightgray;
     border-radius: 10px;
     border-color: white;
-    font-size:0.5rem;
     margin: 1px;
 }
 
 .bttn{
-width:50%;
-font-size:2rem;
+width:100%;
+font-size:2.4vw;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+h4{
+font-size:2vw;
+}
+
+#today-weather{
+    color:rgb(58, 58, 58)
 }
