@@ -1,5 +1,4 @@
 //Define Globral Variables=============================
-localStorage.clear();
 var userFormEl = document.querySelector('#user-form');
 var nameInputEl = document.querySelector('#username');
 var key = 'cefff9e5ecfb93df0edc8e7345246ef1';
@@ -10,6 +9,7 @@ var h=1
 var x=0
 var cityName="";
 var cityArray=[]
+var retrievedData=localStorage.getItem("searchedCity")
 //======================================================
 //User presses GET WEATHER button and runs searchWeather function to load weather forecast
 var formSubmitHandler = function (event) {
@@ -113,6 +113,7 @@ if (x==0){//If X is less than 1, then a new city has been searched
         newDiv.appendChild(newBr);
         $('#search-history').prepend(newSpan);//jquery to put button and line break at the top of seach-history
         $('#search-history').prepend(newBr);//by default these were appearing below
+        localStorage.setItem("searchedCity", JSON.stringify(cityArray));
     } else {//similiar to above, but this runs until search history fills with 5 cities
         var newSpan = document.createElement('button');
         var newBr = document.createElement('br');
@@ -124,6 +125,9 @@ if (x==0){//If X is less than 1, then a new city has been searched
         newDiv.appendChild(newBr);
         $('#search-history').prepend(newSpan);
         $('#search-history').prepend(newBr);
+        localStorage.setItem("searchedCity", JSON.stringify(cityArray));
+
+
 }
     i+=1
 }
@@ -137,3 +141,11 @@ x=0//resets x to 0 so it can check if its value goes above 0 in searched city hi
      }
 //Event listener for submit button==========================
   userFormEl.addEventListener('submit', formSubmitHandler);
+//Checks local storage and loads search history when page loads
+  window.onload = function() {
+    var searchHistory=JSON.parse(retrievedData)
+    console.log(retrievedData)
+    k=searchHistory.length-1
+    cityName=(searchHistory[k])
+    searchWeater()
+  };
