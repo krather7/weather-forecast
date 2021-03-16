@@ -19,4 +19,4 @@
 ### Credits:
 * Kyle Rather
 ### Screenshot:
-![Screenshot](https://github.com/krather7/Day-Planner/blob/main/screenshot.png)
+![Screenshot](https://github.com/krather7/weather-forecast/blob/main/screenshot.png)
