@@ -21,6 +21,6 @@
 * [OpenWeatherMap API](https://openweathermap.org/api)
 * [Bootstrap](https://getbootstrap.com/)
 ### Credits:
-* Kyle Rather
+* [Kyle Rather](mailto:krather7@gmail.com)
 ### Screenshot:
 ![Screenshot](https://github.com/krather7/weather-forecast/blob/main/screenshot.png)
