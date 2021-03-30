@@ -19,6 +19,7 @@
 * After five searched cities appear in the history, the oldest one will be overwritten with the current
 ### Technologies:
 * [OpenWeatherMap API](https://openweathermap.org/api)
+* [Bootstrap](https://getbootstrap.com/)
 ### Credits:
 * Kyle Rather
 ### Screenshot:
