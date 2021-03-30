@@ -2,6 +2,7 @@
 ## Contents:
 #### * INSTALLATION
 #### * USAGE
+#### * TECHNOLOGIES
 #### * CREDITS
 #### * SCREENSHOT<br>
 ### Installation:
@@ -16,6 +17,8 @@
 * The five day forecast will show the date, temperature, humidity, and weather icon
 * When the user searches a city, it will be saved in a search histroy on the left of the screen
 * After five searched cities appear in the history, the oldest one will be overwritten with the current
+### Technologies:
+* [OpenWeatherMap API](https://openweathermap.org/api)
 ### Credits:
 * Kyle Rather
 ### Screenshot:
